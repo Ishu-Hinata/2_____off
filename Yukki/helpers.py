@@ -141,7 +141,7 @@ Simple AFK commands~
 
 𓆩⌬𓆪 UCO Project
 
-[SOURCE CODE: REPO]()
+[SOURCE CODE: REPO](https://t.me/C2_Probot?start=repo)
 """
 
 def settings_markup(status: Union[bool, str] = None):
