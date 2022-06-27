@@ -1,12 +1,3 @@
-#
-# Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
-#
-# This file is part of < https://github.com/TeamYukki/YukkiAFKBot > project,
-# and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/TeamYukki/YukkiAFKBot/blob/master/LICENSE >
-#
-# All rights reserved.
-
 import time
 import random
 
@@ -28,18 +19,18 @@ async def on_start(_, message: Message):
         [
             [
                 InlineKeyboardButton(
-                    text="📜 Help Section",
+                    text="Help ❔",
                     url=f"https://t.me/{botusername}?start=help",
                 ),
                 InlineKeyboardButton(
-                    text="🔧 Settings",
+                    text="Settings❓",
                     callback_data="settings_callback",
                 ),
             ]
         ]
     )
     image = random.choice(RANDOM)
-    send = await message.reply_photo(image, caption=f"Hello! My name is {botname}.\n\nTo know more about me check help section. Active since {Uptime}", reply_markup=upl)
+    send = await message.reply_photo(image, caption=f"Version⌱ P.C3\n\nUptime⌱ {Uptime}", reply_markup=upl)
     await put_cleanmode(message.chat.id, send.message_id)
     
 
@@ -68,15 +59,19 @@ async def on_private_start(_, message: Message):
         bot_uptime = int(time.time() - boot)
         Uptime = get_readable_time(bot_uptime)
         upl = InlineKeyboardMarkup(
+        [
             [
-                [
-                    InlineKeyboardButton(
-                        text="➕ Add me to a Group",
-                        url=f"https://t.me/{botusername}?startgroup=true",
-                    ),
-                ]
+                InlineKeyboardButton(
+                    text="Help ❔",
+                    callback_data="HELP_TEXT",
+                ),
+                InlineKeyboardButton(
+                    text="Chat ❓",
+                    url=f"https://t.me/+LuNfF7pzIggyNWE1",
+                ),
             ]
-        )
+        ]
+    )
         image = random.choice(RANDOM)
         await message.reply_photo(image, caption=f"Hello! My name is {botname}.\n\nTo know more about me check help section by /help. Active since {Uptime}", reply_markup=upl)
 
