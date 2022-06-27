@@ -1,12 +1,3 @@
-#
-# Copyright (C) 2021-2022 by TeamYukki@Github, < https://github.com/TeamYukki >.
-#
-# This file is part of < https://github.com/TeamYukki/YukkiAFKBot > project,
-# and is released under the "GNU v3.0 License Agreement".
-# Please see < https://github.com/TeamYukki/YukkiAFKBot/blob/master/LICENSE >
-#
-# All rights reserved.
-
 import asyncio
 
 from typing import Union
@@ -109,34 +100,29 @@ RANDOM = [
 ]
 
 
-HELP_TEXT = f"""Welcome to {botname}'s Help Section.
-
-- When someone mentions you in a chat, the user will be notified you are AFK. You can even provide a reason for going AFK, which will be provided to the user as well.
-
+HELP_TEXT = f"""When someone mentions you in a chat, the user will be notified you are AFK. You can even provide a reason for going AFK, which will be provided to the user as well.
+Simple AFK commands~
 
 /afk - This will set you offline.
 
 /afk [Reason] - This will set you offline with a reason.
 
-/afk [Replied to a Sticker/Photo] - This will set you offline with an image or sticker.
+/afk [Replied to a Sticker/Media] - This will set you offline with an Media File.
 
-/afk [Replied to a Sticker/Photo] [Reason] - This will set you afk with an image and reason both.
-
-
-/settings - To change or edit basic settings of AFK Bot.
+/afk [Replied to a Sticker/Media] [Reason] - This will set you afk with Media and reason both.
 """
 
 def settings_markup(status: Union[bool, str] = None):
     buttons = [
         [
-            InlineKeyboardButton(text="🔄 Clean Mode", callback_data="cleanmode_answer"),
+            InlineKeyboardButton(text="💚CLEAN MODE💛", callback_data="cleanmode_answer"),
             InlineKeyboardButton(
-                text="✅ Enabled" if status == True else "❌ Disabled",
+                text="✅" if status == True else "❌",
                 callback_data="CLEANMODE",
             ),
         ],
         [
-            InlineKeyboardButton(text="🗑 Close Menu", callback_data="close"),
+            InlineKeyboardButton(text="CLOSE", callback_data="close"),
         ],
     ]
     return buttons
