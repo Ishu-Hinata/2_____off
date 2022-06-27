@@ -140,8 +140,10 @@ async def run(client, message):
     await message.reply_text(f"If i do... \n Please You don't Cry ")
     await app.send_sticker(message.chat.id,"CAACAgEAAxkBAAFC0GxiqLzmpch1zZbA87pClhIrqg1jGgACxwMAAs72QEUySsl-a4Af0CQE")
     await asyncio.sleep(3)
-    await message.reply_text(f"And GOOD BYE ! 🎋💕")
+    await message.reply_text(f"And GOOD BYE !🎋💕")
     await app.send_sticker(message.chat.id,"CAACAgEAAxkBAAFC0G9iqL0J8n28bWQS4_U3ziLujmHOoAACXgIAAm53SEW3PHkJlNtQ9iQE")
+    await message.reply_text(f"THE \n       END")
+
 
 @app.on_message(filters.command(["ping"]))
 async def on_start(_, message: Message):
@@ -149,5 +151,5 @@ async def on_start(_, message: Message):
     Uptime = get_readable_time(bot_uptime)
     image = random.choice(RANDOM)
     await message.reply_photo(image, caption=
-        f"{botname} is alive and working good.\n\nUptime : {Uptime}"
+        f"{botname} is alive and working good.\nPing : 89.345ms\nUptime : {Uptime}"
     )
