@@ -140,6 +140,8 @@ Simple AFK commands~
 /afk [Replied to a Sticker/Media] [Reason] - This will set you afk with Media and reason both.
 
 𓆩⌬𓆪 UCO Project
+
+[SOURCE CODE: REPO]()
 """
 
 def settings_markup(status: Union[bool, str] = None):
