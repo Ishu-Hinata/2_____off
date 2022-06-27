@@ -86,7 +86,7 @@ async def on_close_button(client, CallbackQuery):
 
 @app.on_callback_query(filters.regex("cleanmode_answer"))
 async def on_cleanmode_button(client, CallbackQuery):
-    await CallbackQuery.answer("⁉️ What is This?\n\nWhen activated, Bot will delete its message after 5 Mins to make your chat clean and clear.", show_alert=True)
+    await CallbackQuery.answer("What's CleanMode ⁉️\n\nWhen activated, Bot will delete its message after 1 Mins to make your chat clean and clear.", show_alert=True)
 
 @app.on_callback_query(filters.regex("settings_callback"))
 async def on_settings_button(client, CallbackQuery):
