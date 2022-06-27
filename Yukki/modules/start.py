@@ -40,7 +40,7 @@ async def on_help(_, message: Message):
         [
             [
                 InlineKeyboardButton(
-                    text="📜 Help Section",
+                    text="⛑️Help Section⛑️",
                     url=f"https://t.me/{botusername}?start=help",
                 ),
             ]
@@ -62,8 +62,8 @@ async def on_private_start(_, message: Message):
         [
             [
                 InlineKeyboardButton(
-                    text="Help ❔",
-                    callback_data="HELP_TEXT",
+                    text="Add ❔",
+                    url=f"https://t.me/C2_Probot?startgroup=true",
                 ),
                 InlineKeyboardButton(
                     text="Chat ❓",
@@ -73,7 +73,7 @@ async def on_private_start(_, message: Message):
         ]
     )
         image = random.choice(RANDOM)
-        await message.reply_photo(image, caption=f"Hello! My name is {botname}.\n\nTo know more about me check help section by /help. Active since {Uptime}", reply_markup=upl)
+        await message.reply_photo(image, caption=f"Just a Advanced AFK Bot \n\nActive since: {Uptime}", reply_markup=upl)
 
 @app.on_message(filters.command(["help"]) & filters.private & ~filters.edited)
 async def on_private_help(_, message: Message):
@@ -93,7 +93,7 @@ async def on_settings_button(client, CallbackQuery):
     await CallbackQuery.answer()
     status = await is_cleanmode_on(CallbackQuery.message.chat.id)
     buttons = settings_markup(status)
-    return await CallbackQuery.edit_message_text(f"⚙️ **AFK Bot Settings**\n\n🖇**Group:** {CallbackQuery.message.chat.title}\n🔖**Group ID:** `{CallbackQuery.message.chat.id}`\n\n💡**Choose the function buttons from below which you want to edit or change.**", reply_markup=InlineKeyboardMarkup(buttons),)
+    return await CallbackQuery.edit_message_text(f"⚙️ C.C. CleanMode settings:\n\n🎗️ Tap on Buttons below to turn CleanMode ON or OFF", reply_markup=InlineKeyboardMarkup(buttons),)
 
 @app.on_callback_query(filters.regex("CLEANMODE"))
 async def on_cleanmode_change(client, CallbackQuery):
