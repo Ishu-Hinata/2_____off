@@ -67,6 +67,7 @@ asyncio.create_task(auto_clean())
 
 
 RANDOM = [
+    "https://telegra.ph/file/0ae0fe261a86bfd61e526.jpg",
     "https://telegra.ph/file/62e2916b2644ca8c6d970.jpg",
     "https://telegra.ph/file/e0298dbe967d8631a304e.jpg",
     "https://telegra.ph/file/bebac0f849b8dc1a5b05d.jpg",
@@ -94,11 +95,13 @@ RANDOM = [
     "https://telegra.ph/file/2baec11bdc351a3242ec7.jpg",
     "https://telegra.ph/file/1e4a0db7d115f68c67c2d.jpg",
     "https://telegra.ph/file/daebcbcbcaf6965fba555.jpg",
+    "https://telegra.ph/file/0ae0fe261a86bfd61e526.jpg",
     "https://telegra.ph/file/6fa047d5a19ee85efe3d2.jpg",
     "https://telegra.ph/file/78af05493d5619ac5c04a.jpg",
     "https://telegra.ph/file/9385d9c7cd30a658741b4.jpg",
     "https://telegra.ph/file/2637397252b8cb407e4f5.jpg",
     "https://telegra.ph/file/6bb8d8bb036f123a089b6.jpg",
+    "https://telegra.ph/file/0ae0fe261a86bfd61e526.jpg",
     "https://telegra.ph/file/2e95e06050fafb9c774cd.jpg",
     "https://telegra.ph/file/fb5a6dad800340cdb1e53.jpg",
     "https://telegra.ph/file/6efeadc5461bdb705614c.jpg",
@@ -111,6 +114,7 @@ RANDOM = [
     "https://telegra.ph/file/45333aa40e2d09920e3c4.jpg",
     "https://telegra.ph/file/74e39b66613673377c3f6.jpg",
     "https://telegra.ph/file/9dbbd2746a0a4fcb5e96a.jpg",
+    "https://telegra.ph/file/0ae0fe261a86bfd61e526.jpg",
     "https://telegra.ph/file/9dbbd2746a0a4fcb5e96a.jpg",
     "https://telegra.ph/file/64584e3ca7cd973689c23.jpg",
     "https://telegra.ph/file/4ed524de8ead9e39d66cc.jpg",
