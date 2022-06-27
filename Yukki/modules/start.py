@@ -147,6 +147,7 @@ async def run(client, message):
 async def on_start(_, message: Message):
     bot_uptime = int(time.time() - boot)
     Uptime = get_readable_time(bot_uptime)
-    await message.reply_photo(photo="RANDOM", caption=
+    image = random.choice(RANDOM)
+    await message.reply_photo(image, caption=
         f"{botname} is alive and working good.\n\nUptime : {Uptime}"
     )
