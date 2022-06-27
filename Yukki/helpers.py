@@ -38,7 +38,7 @@ async def put_cleanmode(chat_id, message_id):
     time_now = datetime.now()
     put = {
         "msg_id": message_id,
-        "timer_after": time_now + timedelta(minutes=5),
+        "timer_after": time_now + timedelta(minutes=1),
     }
     cleanmode[chat_id].append(put)
 
@@ -101,6 +101,7 @@ RANDOM = [
 
 
 HELP_TEXT = f"""When someone mentions you in a chat, the user will be notified you are AFK. You can even provide a reason for going AFK, which will be provided to the user as well.
+
 Simple AFK commands~
 
 /afk - This will set you offline.
@@ -110,14 +111,16 @@ Simple AFK commands~
 /afk [Replied to a Sticker/Media] - This will set you offline with an Media File.
 
 /afk [Replied to a Sticker/Media] [Reason] - This will set you afk with Media and reason both.
+
+𓆩⌬𓆪 UCO Project
 """
 
 def settings_markup(status: Union[bool, str] = None):
     buttons = [
         [
-            InlineKeyboardButton(text="💚CLEAN MODE💛", callback_data="cleanmode_answer"),
+            InlineKeyboardButton(text="CLEAN MODE→", callback_data="cleanmode_answer"),
             InlineKeyboardButton(
-                text="✅" if status == True else "❌",
+                text="✅ On" if status == True else "❌ Off",
                 callback_data="CLEANMODE",
             ),
         ],
