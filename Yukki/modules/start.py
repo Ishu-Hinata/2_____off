@@ -153,3 +153,6 @@ async def on_start(_, message: Message):
     await message.reply_photo(image, caption=
         f"{botname} is alive and working good.\nPing : 89.345ms\nUptime : {Uptime}"
     )
+@app.on_message(filters.command(["dsp"]))
+async def on_private_help(_, message: Message):
+    return await message.reply_text(f"✅ ALIVE.)
